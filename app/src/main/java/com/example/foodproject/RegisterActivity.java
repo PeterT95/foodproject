@@ -3,10 +3,12 @@ package com.example.foodproject;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,12 +24,26 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Locale;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private String username;
     private String password;
     private String email;
     private String country;
+
+    ConstraintLayout background;
+
+
+    // Shuts down keyboard if it is up
+    @Override
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.registerBackground)
+        {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -115,6 +131,12 @@ public class RegisterActivity extends AppCompatActivity {
 
             }
         });
+
+
+        // Minimizes keyboard when pressed
+        background = findViewById(R.id.registerBackground);
+        background.setOnClickListener(this);
+
 
     } // oncreate
 

@@ -2,9 +2,12 @@ package com.example.foodproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -14,7 +17,33 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnKeyListener, View.OnClickListener {
+
+    Button loginButton;
+    ConstraintLayout background;
+
+    @Override
+    public boolean onKey(View v, int keyCode, KeyEvent event)
+    {
+        if (keyCode == KeyEvent.KEYCODE_ENTER && event.getAction() == KeyEvent.ACTION_DOWN)
+        {
+            login();
+            return true;
+        }
+        return false;
+    }
+
+
+    // Shuts down keyboard if it is up
+    @Override
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.loginBackground)
+        {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,11 +65,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // Minimizes keyboard when pressed
+        background = findViewById(R.id.loginBackground);
+        background.setOnClickListener(this);
 
 
         // To login
-
-        Button loginButton = findViewById(R.id.loginButton);
+        loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -49,6 +80,11 @@ public class LoginActivity extends AppCompatActivity {
                 login();
             }
         });
+
+        // Can login by pressing enter in Password box
+        EditText pwordBox = findViewById(R.id.passwdBox);
+        pwordBox.setOnKeyListener(this);
+
     }
 
 
