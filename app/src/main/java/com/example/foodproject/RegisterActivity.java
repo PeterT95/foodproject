@@ -167,7 +167,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
         else
         {
-
+            ParseUser.getCurrentUser().logOut();
             ParseUser user = new ParseUser();
             user.setUsername(username);
             user.setPassword(password);

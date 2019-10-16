@@ -103,6 +103,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnKeyListen
         }
         else
         {
+            ParseUser.getCurrentUser().logOut();
             ParseUser parseUser = new ParseUser();
 
             parseUser.setUsername(userBox.getText().toString());

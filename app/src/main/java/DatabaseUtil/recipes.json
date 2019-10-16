@@ -1,4 +1,5 @@
-{ "recipes" : [
+{ "recipes" :
+	[
 	{ "Name" : "Spaghetti aglio e olio",
 		"Ingredients": {
 		"ingNames": ["Spaghetti", "Gralic Cloves", "Olive Oil", "Chili Flakes", "Fresh Italian Parsley", "Parmigiano-Reggiano", "Lemon"],
@@ -44,14 +45,14 @@
 		  "step3" : "Sauce: Add the garlic to the frying pan and cook gently for 1 minute until fragrant but not brown. Add the chili flakes and cook for a further 20 seconds.",
 		  "step4" : "Sauce: Pour in the whole tinned tomatoes and start to break them.",
 		  "step5" : "Sauce: Add the onion powder and oregano and simmer for 25-30 minutes on medium heat.",
-		  "step6" : "Sauce: If desired, add the sauce to a blender and purée until smooth, alternatively squash the tomatoes in the pan until desired consistency.",
-		  "step7" : "Once ready to work the dough, preheat the oven to its maxiumum setting for 30-40 minutes.",
+		  "step6" : "Sauce: If desired, use a hand blender to purée until smooth, alternatively squash the tomatoes in the pan until desired consistency.",
+		  "step7" : "Once ready to work the dough, preheat the oven to its maximum setting for 30-40 minutes.",
 		  "step8" : "Dough: Flour the work surface and start to roll the dough around to form a ball.",
 		  "step9" : "Dough: Portion the dough into 4 pieces by cutting the ball.",
 		  "step10" : "Dough: Sprinkle the semonlina or flour onto your baking tray and add a portion of dough to it.",
 		  "step11" : "Dough: Gently shape the dough into the desired shape. Take care not to knock too much air out and do not use a rolling pin.",
 		  "step12" : "Sauce: Add 2 tablespoons of the sauce to the dough and spread evenly over the pizza dough. Be relatively conservative with the sauce, try not to add more than necessary to cover.",
-		  "step13" : "Rip the fresh mozzarella cheese and place onto the pizza. Aim for pools of mozzerella and try not to add too much as this can spoil the crust.",
+		  "step13" : "Rip the fresh mozzarella cheese and place onto the pizza. Aim for pools of mozzarella and try not to add too much as this can spoil the crust.",
 		  "step14" : "Rip 5-6 basil leaves and top the pizza with them.",
 		  "step15" : "Before placing in the oven, gently shake the baking tray to ensure the pizza will release. If it sticks, try to gently lift and add more semolina / flour.",
 		  "step16" : "Place the pizza into the oven for 7-9 minutes until the cheese is golden."

@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">foodproject</string>
 
-    <string name="back4app_server_url">http://ec2-35-177-166-89.eu-west-2.compute.amazonaws.com:80/parse/</string>
-    <string name="back4app_app_id">60a24f48e12159f0cca10c0e5a528397d49d93f8</string>
-    <string name="back4app_client_key">81e59506951130dd314c4aedd05dff7d5b5c80f4</string>
+    <string name="back4app_server_url">http://3.9.19.126:80/parse/</string>
+    <string name="back4app_app_id">73752743da2d28dede14394068b72e33a57c0c8b</string>
+    <string name="back4app_client_key">9781a7fe5d0a113b60251183bc98b2dc5b0cab5a</string>
     <string name="title_activity_home">HOME</string>
 
 
